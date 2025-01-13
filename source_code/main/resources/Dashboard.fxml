@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.DashboardController">
+   <children>
+      <GridPane fx:id="main_form" stylesheets="@DashboardDesign.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="162.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="564.0" minHeight="4.0" prefHeight="7.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="575.0" minHeight="10.0" prefHeight="549.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="45.0" prefWidth="1100.0" stylesheets="@DashboardDesign.css">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="250.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="919.0" minWidth="10.0" prefWidth="850.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane alignment="TOP_CENTER" prefHeight="66.0" prefWidth="230.0" stylesheets="@DashboardDesign.css">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="35.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="215.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="48.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" translateY="-5.0">
+                           <image>
+                              <Image url="@obrazy/food_bank_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="271.0" text="System Zarządzania Restauracją" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="35.0" prefWidth="850.0" styleClass="top-form" stylesheets="@DashboardDesign.css" GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="863.0" minWidth="10.0" prefWidth="271.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="863.0" minWidth="10.0" prefWidth="485.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="25.0" prefWidth="50.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="25.0" prefWidth="50.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="449.0" minWidth="10.0" prefWidth="15.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="24.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button id="minimize" fx:id="minimize" alignment="CENTER" contentDisplay="CENTER" layoutX="796.0" layoutY="22.0" mnemonicParsing="false" onAction="#minimize" prefHeight="36.0" prefWidth="46.0" styleClass="minimalizuj" stylesheets="@DashboardDesign.css" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@obrazy/remove_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="close" fx:id="close" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#close" prefHeight="36.0" prefWidth="46.0" styleClass="close" stylesheets="@DashboardDesign.css" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@obrazy/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane stylesheets="@DashboardDesign.css" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="250.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="868.0" minWidth="10.0" prefWidth="850.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="305.0" minHeight="10.0" prefHeight="172.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="179.0" minHeight="0.0" prefHeight="12.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="365.0" minHeight="10.0" prefHeight="365.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane fx:id="dashboard_form1" styleClass="shadow" stylesheets="@DashboardDesign.css" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="white-bg" stylesheets="@DashboardDesign.css">
+                           <children>
+                              <HBox prefHeight="365.0" prefWidth="469.0">
+                                 <children>
+                                    <BarChart fx:id="dashboard_NOCChart" prefHeight="332.0" prefWidth="348.0" styleClass="label" stylesheets="@DashboardDesign.css" title="Liczba zamówień">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="332.0" prefWidth="522.0">
+                                 <children>
+                                    <AreaChart fx:id="dashboard_ICChart" prefHeight="365.0" prefWidth="471.0" title="Przychód">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="dashboard_form2" prefHeight="281.0" prefWidth="850.0" styleClass="shadow" stylesheets="@DashboardDesign.css" visible="false" GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="white-bg" stylesheets="@DashboardDesign.css">
+                           <children>
+                              <VBox prefHeight="206.0" prefWidth="65.0" />
+                              <VBox prefHeight="206.0" prefWidth="200.0" styleClass="card" stylesheets="@DashboardDesign.css">
+                                 <children>
+                                    <VBox prefHeight="111.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="65.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@obrazy/groups_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="dashboard_NC" alignment="TOP_RIGHT" prefHeight="123.0" prefWidth="173.0" text="0" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="29.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="147.0" prefWidth="255.0" text="Liczba klientów" textFill="WHITE">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="206.0" prefWidth="60.0" />
+                              <VBox prefHeight="206.0" prefWidth="200.0" styleClass="card" stylesheets="@DashboardDesign.css">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox prefHeight="116.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="65.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@obrazy/payments_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" />
+                                                         </image>
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <Label fx:id="dashboard_TI" alignment="TOP_RIGHT" prefHeight="173.0" prefWidth="245.0" text="0 zł" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="29.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="102.0" prefWidth="200.0" text="Dzisiejszy przychód" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="206.0" prefWidth="60.0" />
+                              <VBox prefHeight="206.0" prefWidth="200.0" styleClass="card" stylesheets="@DashboardDesign.css">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="65.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@obrazy/payments_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" />
+                                                         </image>
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="10.0" />
+                                                         </VBox.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <Label fx:id="dashboard_TIncome" alignment="TOP_RIGHT" prefHeight="138.0" prefWidth="136.0" text="0 zł" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="29.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets right="10.0" top="10.0" />
+                                                   </padding>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="174.0" prefWidth="372.0" text="Przychód całkowity" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane stylesheets="@DashboardDesign.css" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="35.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="35.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="nav2" />
+                     </styleClass>
+                     <children>
+                        <Button fx:id="dashboard_btn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Dashboard" GridPane.columnIndex="1" />
+                        <Button fx:id="availableFD_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="40.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Jedzenie i napoje" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="order_btn" alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="73.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DashboardDesign.css" text="Zamówienie" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="logout" mnemonicParsing="false" onAction="#logout" prefHeight="44.0" prefWidth="33.0" styleClass="signout" stylesheets="@DashboardDesign.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@obrazy/logout_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label prefHeight="17.0" prefWidth="120.0" text="Wyloguj" translateX="60.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Tahoma" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane prefHeight="210.0" prefWidth="250.0" stylesheets="@DashboardDesign.css">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="78.0" minWidth="10.0" prefWidth="37.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="172.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="41.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="124.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="84.0" minHeight="9.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="username" alignment="TOP_CENTER" prefHeight="69.0" prefWidth="172.0" text="Sebastian" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" prefHeight="70.0" prefWidth="172.0" text="Nazwa użytkownika:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="172.0" text="Witaj!" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="106.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true" translateX="35.0" translateY="5.0" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@obrazy/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="nav1" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </GridPane>
+                  <VBox fx:id="availableFD_form1" prefHeight="200.0" prefWidth="100.0" stylesheets="@DashboardDesign.css" visible="false" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                     <children>
+                        <HBox prefHeight="117.0" prefWidth="850.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="84.0">
+                                 <children>
+                                    <Label prefHeight="100.0" prefWidth="111.0" text="ID Produktu:">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="91.0">
+                                 <children>
+                                    <TextField fx:id="availableFD_productID" alignment="CENTER" prefHeight="26.0" prefWidth="90.0" styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <VBox.margin>
+                                          <Insets top="35.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="55.0">
+                                 <children>
+                                    <Label prefHeight="100.0" prefWidth="111.0" text="Rodzaj:">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="94.0" layoutY="10.0" prefHeight="94.0" prefWidth="162.0">
+                                 <children>
+                                    <ComboBox fx:id="availableFD_type" prefHeight="25.0" prefWidth="144.0" promptText="Wybierz..." styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <VBox.margin>
+                                          <Insets top="36.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="106.0">
+                                 <children>
+                                    <Label prefHeight="100.0" prefWidth="111.0" text="Nazwa produktu:">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="133.0">
+                                 <children>
+                                    <TextField fx:id="availableFD_productName" alignment="CENTER" prefHeight="26.0" prefWidth="90.0" styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <VBox.margin>
+                                          <Insets top="35.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="60.0">
+                                 <children>
+                                    <Label prefHeight="100.0" prefWidth="78.0" text="Cena(zł):">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="91.0">
+                                 <children>
+                                    <TextField fx:id="availableFD_price" alignment="CENTER" prefHeight="26.0" prefWidth="90.0" promptText="0.0 zł" styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <VBox.margin>
+                                          <Insets top="25.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label prefHeight="100.0" prefWidth="53.0" text="Status:">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <VBox prefHeight="78.0" prefWidth="154.0">
+                                 <children>
+                                    <ComboBox fx:id="availableFD_productStatus" prefHeight="25.0" prefWidth="144.0" promptText="Wybierz..." styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <VBox.margin>
+                                          <Insets top="25.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="221.0" />
+                              <VBox prefHeight="78.0" prefWidth="104.0">
+                                 <children>
+                                    <Button fx:id="availableFD_addBtn" mnemonicParsing="false" onAction="#availableFDAdd" prefHeight="50.0" prefWidth="80.0" styleClass="add-btn" stylesheets="@DashboardDesign.css" text="Dodaj">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></Button>
+                                    <Button fx:id="availableFD_clearBtn" mnemonicParsing="false" onAction="#availableFDClear" prefHeight="50.0" prefWidth="80.0" styleClass="clear-btn" stylesheets="@DashboardDesign.css" text="Wyczyść">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin></Button>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="111.0">
+                                 <children>
+                                    <Button fx:id="availableFD_updateBtn" mnemonicParsing="false" onAction="#availableFDUpdate" prefHeight="50.0" prefWidth="80.0" styleClass="update-btn" stylesheets="@DashboardDesign.css" text="Aktualizuj" />
+                                    <Button fx:id="availableFD_removeBtn" mnemonicParsing="false" onAction="#availableFDDelete" prefHeight="50.0" prefWidth="80.0" styleClass="delete-btn" stylesheets="@DashboardDesign.css" text="Usuń">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin></Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="availableFD_form2" prefHeight="200.0" prefWidth="100.0" stylesheets="@DashboardDesign.css" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                     <children>
+                        <VBox prefHeight="34.0" prefWidth="850.0">
+                           <children>
+                              <HBox prefHeight="34.0" prefWidth="645.0">
+                                 <children>
+                                    <ImageView fitHeight="46.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@obrazy/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <TextField fx:id="availableFD_search" onKeyTyped="#availableFDSearch" prefHeight="23.0" prefWidth="280.0" promptText="Wyszukaj" styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <TableView fx:id="availableFD_tableView" onMouseClicked="#availableFDSelect" prefHeight="333.0" prefWidth="850.0">
+                          <columns>
+                            <TableColumn fx:id="availableFD_col_productID" prefWidth="186.0" text="ID Produktu" />
+                            <TableColumn fx:id="availableFD_col_productName" prefWidth="205.0" text="Nazwa Produktu" />
+                              <TableColumn fx:id="availableFD_col_type" prefWidth="132.0" text="Rodzaj" />
+                              <TableColumn fx:id="availableFD_col_price" prefWidth="172.0" text="Cena(zł)" />
+                              <TableColumn fx:id="availableFD_col_status" prefWidth="154.0" text="Status" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="order_form1" layoutX="260.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" stylesheets="@DashboardDesign.css" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                     <children>
+                        <HBox prefHeight="117.0" prefWidth="850.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="84.0">
+                                 <children>
+                                    <Label prefHeight="100.0" prefWidth="111.0" text="ID Produktu:">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="94.0" prefWidth="127.0">
+                                 <children>
+                                    <ComboBox fx:id="order_productID" onMouseClicked="#orderProductId" prefWidth="150.0" promptText="Wybierz..." styleClass="textfield">
+                                       <VBox.margin>
+                                          <Insets top="36.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="106.0">
+                                 <children>
+                                    <Label prefHeight="100.0" prefWidth="111.0" text="Nazwa produktu:">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="133.0">
+                                 <children>
+                                    <ComboBox fx:id="order_productName" onMouseClicked="#orderProductName" prefWidth="150.0" promptText="Wybierz..." styleClass="textfield">
+                                       <VBox.margin>
+                                          <Insets top="36.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="94.0" prefWidth="16.0" />
+                              <Label prefHeight="94.0" prefWidth="34.0" text="Ilość:" />
+                              <VBox prefHeight="100.0" prefWidth="108.0">
+                                 <children>
+                                    <Spinner fx:id="order_productQuantity" onMouseClicked="#orderQuantity" styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <VBox.margin>
+                                          <Insets top="36.0" />
+                                       </VBox.margin>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="order_addBtn" alignment="CENTER" mnemonicParsing="false" onAction="#orderAdd" prefHeight="39.0" prefWidth="71.0" styleClass="add-btn" stylesheets="@DashboardDesign.css" text="Dodaj">
+                                 <HBox.margin>
+                                    <Insets left="35.0" top="30.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="78.0" prefWidth="53.0">
+                                 <children>
+                                    <Label prefHeight="78.0" prefWidth="61.0" text="Suma:">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="93.0">
+                                 <children>
+                                    <Label fx:id="order_total" prefHeight="78.0" prefWidth="96.0" text="0.0 zł" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Arial" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="62.0">
+                                 <children>
+                                    <VBox prefHeight="78.0" prefWidth="44.0">
+                                       <children>
+                                          <Label prefHeight="78.0" prefWidth="54.0" text="Saldo:">
+                                             <VBox.margin>
+                                                <Insets left="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children></VBox>
+                              <Label fx:id="order_balance" prefHeight="78.0" prefWidth="96.0" text="0.0 zł" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="78.0" prefWidth="58.0" text="Kwota:">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <VBox prefHeight="61.0" prefWidth="108.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <TextField fx:id="order_amount" onAction="#orderAmount" promptText="0.0 zł" styleClass="textfield" stylesheets="@DashboardDesign.css">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <VBox.margin>
+                                          <Insets top="25.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="104.0">
+                                 <children>
+                                    <Button fx:id="order_payBtn" mnemonicParsing="false" onAction="#orderPay" prefHeight="50.0" prefWidth="80.0" styleClass="clear-btn" stylesheets="@DashboardDesign.css" text="Zapłać">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="73.0" prefWidth="105.0">
+                                 <children>
+                                    <Button fx:id="order_receiptBtn" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" styleClass="update-btn" stylesheets="@DashboardDesign.css" text="Faktura" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Button fx:id="order_removeBtn" mnemonicParsing="false" onAction="#orderRemove" prefHeight="50.0" prefWidth="80.0" styleClass="delete-btn" stylesheets="@DashboardDesign.css" text="Usuń">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="order_form2" layoutX="260.0" layoutY="194.0" prefHeight="200.0" prefWidth="100.0" stylesheets="@DashboardDesign.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                     <children>
+                        <VBox prefHeight="34.0" prefWidth="850.0">
+                           <children>
+                              <HBox prefHeight="34.0" prefWidth="645.0" />
+                           </children>
+                        </VBox>
+                        <TableView fx:id="order_tableView" onMouseClicked="#orderSelectData" prefHeight="401.0" prefWidth="850.0">
+                           <columns>
+                              <TableColumn fx:id="order_col_productID" prefWidth="186.0" text="ID Produktu" />
+                              <TableColumn fx:id="order_col_productName" prefWidth="205.0" text="Nazwa Produktu" />
+                              <TableColumn fx:id="order_col_type" prefWidth="132.0" text="Rodzaj" />
+                              <TableColumn fx:id="order_col_price" prefWidth="172.0" text="Cena(zł)" />
+                              <TableColumn fx:id="order_col_quantity" prefWidth="154.0" text="Ilość" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="semi-top" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
